@@ -1,39 +1,12 @@
-def ifConfusion(x, y):
-    if x > y:
-        if x - 5 > 0:
-            x = y
-            if y == y + y:
-                return "A"
-            else:
-                return "B"
+# filter in python
 
-        elif x + y > 0:
-            while x > y:
-                x = x - 1
-            while y > x:
-                y = y - 1
-            if x == y:
-                return "E"
+items = [
+  ("Product1", 10),
+  ("Product2", 9),
+  ("Product3", 12)
+]
 
-        else:
-            x = 2 * x
-            if x == y:
-                return "F"
-            else:
-                return "G"
+x = list(filter(lambda item: item[1] >= 10, items))
+print(x)
 
-    else:
-        if x - 2 > y - 4:
-            x_old = x
-            x = y * y
-            y = 2 * x_old
-            if (x - 4) ** 2 > (y - 7) ** 2:
-                return "C"
-            else:
-                return "D"
-
-        else:
-            return "H"
-
-
-print(ifConfusion(6, 6))
+# Map in python
